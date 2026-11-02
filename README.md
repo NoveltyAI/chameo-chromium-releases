@@ -2,13 +2,15 @@
 
 Official Windows x64 kernel packages for Chameo, maintained by NoveltyAI.
 
+Current release: [156.0.8078.79-chameo.2](https://github.com/NoveltyAI/chameo-chromium-releases/releases/tag/156.0.8078.79-chameo.2), **360.2 MB** (11.4% smaller than the original candidate). It passes 42 native browser cases, desktop font/location/UI/GPU checks and real anonymous client download, installation, fingerprint rotation and relaunch.
+
 Download ZIP packages from [Releases](https://github.com/NoveltyAI/chameo-chromium-releases/releases). Each release includes `manifest.json` and `SHA256SUMS`. Chameo discovers these releases and verifies the ZIP SHA-256 before installing it. GitHub sign-in is not required to download public assets.
 
 The kernel is based on ungoogled-chromium with Chameo's versioned native fingerprint configuration. This repository distributes binaries; the maintained kernel source lives in the separate access-controlled `NoveltyAI/chameo-chromium` repository.
 
 ## Portable package
 
-The ZIP contains the browser, production runtime dependencies, all supported UI languages, managed fonts and third-party notices. Font resources are compressed losslessly and restored to their original bytes by Chromium. Developer tools, installers and PWA launch helpers are omitted.
+The ZIP contains the browser, production runtime dependencies, all supported UI languages, managed fonts and third-party notices. Font resources are compressed losslessly and restored to their original bytes by Chromium. Debug/validation helper binaries, installers and PWA launch helpers are omitted. Browser DevTools and the native fingerprint control protocol remain available.
 
 Extract the complete ZIP together. Chameo's kernel manager handles download, integrity verification, extraction and profile launching. Keep the included license and notice files when redistributing.
 
